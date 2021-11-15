@@ -1,3 +1,4 @@
 # Selenium Java oktatás
-## Lab1
-* Statikus HTML oldal létrehozasa
+## POM.XML 
+* dependencies: https://search.maven.org/
+* clean code könyv
