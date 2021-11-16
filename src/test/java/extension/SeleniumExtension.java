@@ -15,7 +15,6 @@ public class SeleniumExtension implements BeforeEachCallback, BeforeAllCallback,
         ParameterResolver {
 
     private WebDriver driver;
-
     private URL url;
 
     @Override
