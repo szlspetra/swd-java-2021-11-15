@@ -1,22 +1,18 @@
-package htmlIntro;
+package welcome;
 
 import extension.SeleniumTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.net.URL;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SeleniumTest
-class HtmlIntroTest {
+public class WelcomeTest {
 
     @Test
-    void testLocators(WebDriver driver, URL url) {
-        driver.get(url.toString());
-//        var headerOneWebElement = driver.findElement(By.id("page-header"));
-//        var headerOne = headerOneWebElement.getText();
+    void testWelcomeText (WebDriver driver, URL url) {
+        driver.get(url + "welcome");
 
         var headerOne = driver.findElement(By.id("page-header")).getText();
         assertEquals("Intro html format", headerOne);

@@ -34,7 +34,7 @@ public class SeleniumExtension implements BeforeEachCallback, BeforeAllCallback,
         // Beolvasom az URL-t
         String urlPrefix = System.getProperty("selenium.url");
         if (urlPrefix == null) {
-            urlPrefix = "https://szlspetra.github.io/swd-java-2021-11-15/";
+            urlPrefix = "https://szlspetra.github.io/swd-java-2021-11-15";
         }
         url = new URL(urlPrefix);
     }
