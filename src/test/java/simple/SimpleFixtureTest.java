@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import com.github.dockerjava.api.model.Driver;
 
+import io.github.artsok.RepeatedIfExceptionsTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
@@ -48,9 +49,9 @@ public class SimpleFixtureTest {
 		assertEquals("Welcome!!", header.getText());
 	}
 	
-	@Test
+	@RepeatedIfExceptionsTest(repeats = 3)
 	void testHeaderWithErasure() {
-		var url = "https://szlspetra.github.io/swd-java-2021-11-15/";
+    		var url = "https0://szlspetra.github.io/swd-java-2021-11-15/";
 		wd.get(url);
 		WebElement header = wd.findElement(By.tagName("h1"));
 		assertEquals("Welcome!", header.getText());
