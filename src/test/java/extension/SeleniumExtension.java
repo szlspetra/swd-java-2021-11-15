@@ -10,6 +10,7 @@ import org.slf4j.bridge.SLF4JBridgeHandler;
 
 import java.net.URL;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class SeleniumExtension implements BeforeEachCallback, BeforeAllCallback, AfterEachCallback,
         ParameterResolver {
@@ -43,6 +44,7 @@ public class SeleniumExtension implements BeforeEachCallback, BeforeAllCallback,
         var options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches", List.of("enable-automation"));
         driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @Override

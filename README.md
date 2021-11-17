@@ -1,4 +1,25 @@
 # Selenium Java oktatás
+## Git repo létrehozása
+C:\Users\Training>cd C:\training\swd-java-2021-11-15
+
+C:\training\swd-java-2021-11-15>git init
+Initialized empty Git repository in C:/training/swd-java-2021-11-15/.git/
+
+C:\training\swd-java-2021-11-15>git add .
+
+C:\training\swd-java-2021-11-15> git config --global user.email szls.petra@gmail.com
+
+C:\training\swd-java-2021-11-15> git config --global user.name "szlspetra"
+
+C:\training\swd-java-2021-11-15>git commit -m "First commit with index.html"
+[master (root-commit) 6c2406f] First commit with index.html
+ 1 file changed, 5 insertions(+)
+ create mode 100644 docs/index.html
+
+C:\training\swd-java-2021-11-15>git remote add origin https://github.com/szlspetra/swd-java-2021-11-15.git
+
+C:\training\swd-java-2021-11-15>git push origin master
+
 ## **Files**
 **docs**
 * A mappában lévő *index.html* megnyitható a github repo/settings/pages-nél látható URL-en keresztül
@@ -26,6 +47,11 @@
 
 **/src/test/resources/logback.xml**
 * logolási szintet és tartalmat konfigurálhatunk
+* <logger .../> tagbe bele kell írni a page-eket
+
+**locations/docker-compose.yml**
+*docker compose up paranccsal futtatható
+*program telepítése lehetséges egy parancssorból
 
 ## Módszertanok
 * clean code könyv
